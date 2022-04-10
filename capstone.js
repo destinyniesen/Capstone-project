@@ -13,9 +13,9 @@ const options=["walk", "exit", "print"];
 let retrieve=trophys[Math.floor(Math.random()*trophys.length)];
 
 function Game(){
-    const attackPower=Math.floor(Math.random()* (9+3-2)*2);
+    const attackPower=Math.floor(Math.random()* (9+4-3)*2);
     const enemy=enemys[Math.floor(Math.random()*enemys.length)];
-    const enemyPower=Math.floor(Math.random()*(9+3-2)*2);
+    const enemyPower=Math.floor(Math.random()*(9+3-1)*2);
     let enemysHealth=50;
 
     const index=readline.keyInSelect(options, "what will you do next?");
@@ -25,7 +25,7 @@ function Game(){
         return userHealth=0;
         break;
         case"print":
-        console.log(playerName+"Health: "+userHealth+"Trophys: "+retrieve);
+        console.log(playerName+" Health: "+userHealth+" Trophys: "+retrieve);
         break; 
         case"walk": 
         let key=Math.random();
